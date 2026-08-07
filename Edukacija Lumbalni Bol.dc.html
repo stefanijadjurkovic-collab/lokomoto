@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&amp;display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:#080d18; font-family:'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#22d3ee; text-decoration:none; }
+  a:hover { color:#67e8f9; }
+  ::selection { background:rgba(34,211,238,0.3); color:#fff; }
+  input, select, textarea, button { font-family:inherit; }
+  @keyframes glowpulse { 0%,100%{ box-shadow:0 0 0 0 rgba(34,211,238,0.35);} 50%{ box-shadow:0 0 34px 4px rgba(34,211,238,0.45);} }
+  @keyframes floaty { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-8px);} }
+  @keyframes spinslow { to { transform:rotate(360deg);} }
+</style>
+</helmet>
+
+<div style="background:#080d18; color:#e8edf5; overflow-x:hidden;">
+
+  <!-- ============ NAV ============ -->
+  <nav style="position:sticky; top:0; z-index:50; padding:16px clamp(20px,5vw,64px); background:rgba(8,13,24,0.78); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,0.06);">
+   <div style="max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <div style="background:#ffffff; border-radius:10px; padding:6px 10px; display:flex; align-items:center;">
+        <img src="uploads/cbd498ac-7270-40a3-b31d-067b31e27e13.png" alt="Lokomoto Centar" style="height:38px; width:auto; display:block;">
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:28px;">
+      <div style="display:flex; gap:26px; font-size:14px; font-weight:500; color:#aab6c8;" class="navlinks">
+        <a href="#problem" style="color:#aab6c8;" style-hover="color:#fff;">Problem</a>
+        <a href="#program" style="color:#aab6c8;" style-hover="color:#fff;">Program</a>
+        <a href="#predavac" style="color:#aab6c8;" style-hover="color:#fff;">Predavač</a>
+        <a href="#faq" style="color:#aab6c8;" style-hover="color:#fff;">FAQ</a>
+      </div>
+      <a href="#prijava" style="background:#22d3ee; color:#062430; font-weight:700; font-size:14px; padding:11px 20px; border-radius:10px; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 8px 26px rgba(34,211,238,0.4); color:#062430;">Prijavi se</a>
+    </div>
+   </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header style="position:relative; padding:clamp(56px,9vw,110px) clamp(20px,5vw,64px) clamp(40px,6vw,72px); background:#080d18; overflow:hidden;">
+    <!-- SLIKA: Pozadinska fotografija hero sekcije — Lokomoto Centar -->
+    <div style="position:absolute; inset:0; background-image:url('uploads/lokomoto-24.jpg'); background-size:cover; background-position:center; z-index:0;"></div>
+    <div style="position:absolute; inset:0; z-index:0; background:linear-gradient(90deg, rgba(8,13,24,0.94) 0%, rgba(8,13,24,0.82) 34%, rgba(8,13,24,0.5) 62%, rgba(8,13,24,0.22) 85%, rgba(8,13,24,0.12) 100%), linear-gradient(rgba(8,13,24,0.3), rgba(8,13,24,0.3));"></div>
+    <div style="position:absolute; left:24px; bottom:20px; z-index:1; font-family:monospace; font-size:11px; color:rgba(125,139,163,0.55);">// lokomoto-24.jpg</div>
+    <div style="position:relative; z-index:2; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.15fr 0.95fr; gap:clamp(32px,5vw,64px); align-items:center;" class="herogrid">
+      <div>
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; display:inline-flex; align-items:center; gap:9px; padding:7px 15px; border:1px solid rgba(34,211,238,0.3); border-radius:100px; background:rgba(34,211,238,0.07); font-size:12.5px; font-weight:600; letter-spacing:0.4px; color:#22d3ee; margin-bottom:26px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#22d3ee; box-shadow:0 0 10px #22d3ee;"></span>
+          DVODNEVNA EDUKACIJA UŽIVO · BEOGRAD
+        </div>
+        <h1 data-reveal="" data-delay="80" style="opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; font-size: clamp(32px,4.6vw,58px); line-height: 1.05; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 22px; text-wrap: balance; position: relative"><span style="background: linear-gradient(120deg, rgb(34, 211, 238), rgb(103, 232, 249)) text; color: transparent;"><span style="color: rgb(232, 237, 245); font-size: clamp(32px, 4.6vw, 58px); letter-spacing: -0.02em; text-wrap-mode: initial; background-color: initial;">Ne uči više vežbi.<br>Nauči da donosiš<br></span>prave odluke.&nbsp;</span></h1>
+        <p data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; font-size:clamp(16px,1.5vw,19px); line-height:1.6; color:#aab6c8; max-width:540px; margin-bottom:34px;">
+          Dvodnevna edukacija uživo u Beogradu sa dr/ft Novakom. Napusti improvizaciju i izgradi klinički sistem koji primenjuješ već od ponedeljka.
+        </p>
+        <div data-reveal="" data-delay="240" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:34px;">
+          <a href="#prijava" style="animation:glowpulse 2.6s ease-in-out infinite; background:#22d3ee; color:#062430; font-weight:700; font-size:16px; padding:16px 28px; border-radius:12px; transition:transform .2s ease;" style-hover="transform:translateY(-2px); color:#062430;">
+            Obezbedi svoje mesto <span style="font-weight:600; opacity:0.8;">· Preostalo samo 20 mesta</span>
+          </a>
+          <button onClick="{{ openVideo }}" style="display:inline-flex; align-items:center; gap:11px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); color:#e8edf5; font-weight:600; font-size:15px; padding:15px 22px; border-radius:12px; cursor:pointer; transition:background .2s ease, border-color .2s ease;" style-hover="background:rgba(255,255,255,0.08); border-color:rgba(34,211,238,0.4);">
+            <span style="width:30px; height:30px; border-radius:50%; background:#22d3ee; display:inline-flex; align-items:center; justify-content:center;">
+              <svg width="11" height="12" viewBox="0 0 11 12" fill="#062430"><polygon points="0,0 11,6 0,12"></polygon></svg>
+            </span>
+            Pogledaj video
+          </button>
+        </div>
+        <!-- Quick Info Bar -->
+        <div data-reveal="" data-delay="320" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; display:flex; flex-wrap:wrap; gap:0; border:1px solid rgba(255,255,255,0.09); border-radius:14px; overflow:hidden; background:rgba(255,255,255,0.02); max-width:560px;">
+          <div style="flex:1; min-width:150px; padding:16px 20px; border-right:1px solid rgba(255,255,255,0.07);">
+            <div style="font-size:11px; letter-spacing:1px; color:#7d8ba3; font-weight:600; margin-bottom:4px;">DATUM</div>
+            <div style="font-size:15px; font-weight:700;">31.10.2026.</div>
+          </div>
+          <div style="flex:1.3; min-width:170px; padding:16px 20px; border-right:1px solid rgba(255,255,255,0.07);">
+            <div style="font-size:11px; letter-spacing:1px; color:#7d8ba3; font-weight:600; margin-bottom:4px;">LOKACIJA</div>
+            <div style="font-size:15px; font-weight:700;">Lokomoto Centar, Beograd</div>
+          </div>
+          <div style="flex:1; min-width:130px; padding:16px 20px;">
+            <div style="font-size:11px; letter-spacing:1px; color:#7d8ba3; font-weight:600; margin-bottom:4px;">MESTA</div>
+            <div style="font-size:15px; font-weight:700;">20 max</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero video player (kompaktan, "pušta se" u uglu) -->
+      <div data-reveal="" data-delay="200" style="opacity:0; transform:translateY(24px); transition:opacity .9s ease, transform .9s ease; display:flex; justify-content:flex-end;">
+        <!-- VIDEO: Kratak promo/atmosfera koji se pušta (npr. promo-video.mp4, poster novak-predavanje.jpg) -->
+        <div onClick="{{ openVideo }}" style="position:relative; width:100%; max-width:440px; aspect-ratio:16/10; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,0.14); cursor:pointer; background:#0b1524; box-shadow:0 30px 80px -30px rgba(0,0,0,0.85);">
+          <video src="uploads/0-02-05-102a799a68ab0579844ae39b8bdfac01d36e9a7b48fb173bfa149e9cad4dfcc0_d9ff64292a14d43e.mp4" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;"></video>
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.9), transparent 55%);"></div>
+          <div style="position:absolute; top:14px; left:14px; display:inline-flex; align-items:center; gap:7px; padding:5px 11px; border-radius:100px; background:rgba(8,13,24,0.65); border:1px solid rgba(255,255,255,0.12); font-size:11px; font-weight:700; letter-spacing:0.5px; color:#fff;">
+            <span style="width:7px; height:7px; border-radius:50%; background:#22d3ee; box-shadow:0 0 10px #22d3ee; animation:glowpulse 2s ease-in-out infinite;"></span> PROMO
+          </div>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:66px; height:66px; border-radius:50%; background:rgba(34,211,238,0.95); display:flex; align-items:center; justify-content:center; box-shadow:0 0 40px rgba(34,211,238,0.55);">
+            <svg width="20" height="22" viewBox="0 0 24 26" fill="#062430"><polygon points="0,0 24,13 0,26"></polygon></svg>
+          </div>
+          <div style="position:absolute; bottom:16px; left:16px; right:16px;">
+            <div style="font-weight:700; font-size:15px; color:#fff;">Kako izgleda edukacija</div>
+            <div style="font-size:12.5px; color:#aab6c8; margin-top:2px;">Klikni za pregled promo videa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Counters strip -->
+    <div style="max-width:1180px; margin:clamp(48px,7vw,80px) auto 0; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;" class="counters">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; text-align:center; padding:22px 12px; border:1px solid rgba(255,255,255,0.07); border-radius:14px; background:rgba(255,255,255,0.02);">
+        <div style="font-size:clamp(30px,3.4vw,42px); font-weight:800; color:#22d3ee;"><span data-count="15" data-suffix="+">0</span></div>
+        <div style="font-size:13px; color:#8895a8; font-weight:500; margin-top:4px;">godina prakse</div>
+      </div>
+      <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; text-align:center; padding:22px 12px; border:1px solid rgba(255,255,255,0.07); border-radius:14px; background:rgba(255,255,255,0.02);">
+        <div style="font-size:clamp(30px,3.4vw,42px); font-weight:800; color:#22d3ee;"><span data-count="2">0</span></div>
+        <div style="font-size:13px; color:#8895a8; font-weight:500; margin-top:4px;">dana uživo</div>
+      </div>
+      <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; text-align:center; padding:22px 12px; border:1px solid rgba(255,255,255,0.07); border-radius:14px; background:rgba(255,255,255,0.02);">
+        <div style="font-size:clamp(30px,3.4vw,42px); font-weight:800; color:#22d3ee;"><span data-count="20">0</span></div>
+        <div style="font-size:13px; color:#8895a8; font-weight:500; margin-top:4px;">mesta ukupno</div>
+      </div>
+      <div data-reveal="" data-delay="240" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; text-align:center; padding:22px 12px; border:1px solid rgba(255,255,255,0.07); border-radius:14px; background:rgba(255,255,255,0.02);">
+        <div style="font-size:clamp(30px,3.4vw,42px); font-weight:800; color:#22d3ee;"><span data-count="399" data-suffix="€">0</span></div>
+        <div style="font-size:13px; color:#8895a8; font-weight:500; margin-top:4px;">investicija</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PREDAVAČ ============ -->
+  <section id="predavac" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#f6f8fb; color:#16202f;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:clamp(32px,5vw,64px); align-items:center; margin-bottom:64px;" class="predgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .9s ease, transform .9s ease;">
+          <!-- SLIKA: Ubaciti sliku Novaka u radu / dijagnostici (npr. novak-dijagnostika.jpg) -->
+          <div style="position:relative; aspect-ratio:4/5; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:repeating-linear-gradient(45deg,#0f1a2e,#0f1a2e 14px,#13223c 14px,#13223c 28px); box-shadow:0 30px 80px -30px rgba(0,0,0,0.8);">
+            <div style="position:absolute; bottom:20px; left:20px; font-family:monospace; font-size:11px; color:#7d8ba3;">// novak-dijagnostika.jpg</div>
+          <img src="./lokomoto-124-msj5zkv3-knrk.jpg" alt="lokomoto-124" width="4000" height="5000" style="max-width: 100%; height: auto; display: block; object-fit: cover; width: 4000px; aspect-ratio: 4000 / 5000"></div>
+        </div>
+        <div data-reveal="" data-delay="120" style="opacity:0; transform:translateY(24px); transition:opacity .9s ease, transform .9s ease;">
+          <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">O PREDAVAČU</div>
+          <h2 style="font-size:clamp(26px,3.4vw,40px); font-weight:800; letter-spacing:-0.02em; margin-bottom:8px;">Novak</h2>
+          <div style="font-size:16px; color:#6b7488; font-weight:600; margin-bottom:24px;">Fizioterapeut · Osnivač Lokomoto Centra, Beograd</div>
+          <p style="color:#515c73; font-size:16px; line-height:1.7; margin-bottom:18px;">Preko 15 godina kliničke prakse posvećene proceni i rehabilitaciji bola u donjem delu leđa — od akutnih stanja do povratka sportista punom opterećenju.</p>
+          <p style="color:#515c73; font-size:16px; line-height:1.7; margin-bottom:28px;">U Lokomoto Centru svakodnevno spaja dijagnostiku, terapiju i trening sa tegovima u jedan sistem. Ovu edukaciju je izgradio iz onoga što stvarno funkcioniše u praksi — bez suvišne teorije.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <div style="padding:10px 16px; border-radius:10px; background:#eef2f7; border:1px solid rgba(15,26,46,0.10); font-size:14px; font-weight:600;">15+ godina prakse</div>
+            <div style="padding:10px 16px; border-radius:10px; background:#eef2f7; border:1px solid rgba(15,26,46,0.10); font-size:14px; font-weight:600;">Osnivač Lokomoto Centra</div>
+            <div style="padding:10px 16px; border-radius:10px; background:#eef2f7; border:1px solid rgba(15,26,46,0.10); font-size:14px; font-weight:600;">Rad sa sportistima</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galerija iz rada -->
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; margin-bottom:64px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:18px; text-align:center;">IZ SVAKODNEVNOG RADA</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px;" class="gallery3">
+          <!-- SLIKA: Novak u proceni/dijagnostici pacijenta (npr. novak-procena.jpg) -->
+          <div style="position:relative; aspect-ratio:3/4; border-radius:16px; overflow:hidden; border:1px solid rgba(15,26,46,0.12); background-image:url('uploads/lokomoto-39.jpg'); background-size:cover; background-position:center;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.8), transparent 45%);"></div>
+            <div style="position:absolute; bottom:14px; left:14px; right:14px;">
+              <div style="font-size:13px; font-weight:700; color:#e8edf5;">Procena pacijenta</div>
+            </div>
+          </div>
+          <!-- SLIKA: Rad sa pacijentom / terapija (npr. novak-terapija.jpg) -->
+          <div style="position:relative; aspect-ratio:3/4; border-radius:16px; overflow:hidden; border:1px solid rgba(15,26,46,0.12); background-image:url('uploads/lokomoto-53.jpg'); background-size:cover; background-position:center;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.8), transparent 45%);"></div>
+            <div style="position:absolute; bottom:14px; left:14px; right:14px;">
+              <div style="font-size:13px; font-weight:700; color:#e8edf5;">Terapija u toku</div>
+            </div>
+          </div>
+          <!-- SLIKA: Trening sa tegovima / hex barom (npr. novak-trening.jpg) -->
+          <div style="position:relative; aspect-ratio:3/4; border-radius:16px; overflow:hidden; border:1px solid rgba(15,26,46,0.12); background-image:url('uploads/lokomoto-44.jpg'); background-size:cover; background-position:center;">
+            <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.8), transparent 45%);"></div>
+            <div style="position:absolute; bottom:14px; left:14px; right:14px;">
+              <div style="font-size:13px; font-weight:700; color:#e8edf5;">Progresija u trening</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kome je namenjeno -->
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; margin-bottom:32px;">
+        <h3 style="font-size:clamp(20px,2.6vw,28px); font-weight:800;">Kome je edukacija namenjena</h3>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;" class="audgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:18px; font-weight:800; margin-bottom:8px; color:#0891b2;">Fizioterapeuti</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Koji žele siguran klinički sistem umesto stalne improvizacije.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:18px; font-weight:800; margin-bottom:8px; color:#0891b2;">Treneri</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Koji rade sa klijentima sa bolom u leđima i žele bezbednu progresiju opterećenja.</div>
+        </div>
+        <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:18px; font-weight:800; margin-bottom:8px; color:#0891b2;">Fizijatri</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Koji žele praktičan, primenljiv okvir za odlučivanje i vođenje rehabilitacije.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ PROBLEM ============ -->
+  <section id="problem" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#edf1f6; color:#16202f;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; max-width:720px; margin:0 auto 56px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">DA LI TI SE OVO DEŠAVA U PRAKSI?</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; margin-bottom:16px; text-wrap:balance;">Bol u leđima izgleda jednostavno — dok ne staneš pred pacijenta.</h2>
+        <p style="color:#515c73; font-size:16px; line-height:1.6;">Najčešće se ne mučiš sa nedostatkom vežbi, već sa nedostatkom sistema koji ti govori šta, kada i zašto primeniti.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-bottom:44px;" class="probgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:26px; border-radius:16px; background:rgba(239,68,68,0.05); border:1px solid rgba(239,68,68,0.18);">
+          <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:#dc2626;">Daješ iste vežbe svima</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Ista lista vežbi za svaki bol u leđima, bez obzira na to šta je stvarni uzrok problema.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:26px; border-radius:16px; background:rgba(239,68,68,0.05); border:1px solid rgba(239,68,68,0.18);">
+          <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:#dc2626;">Ne znaš zašto nešto radi</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Kada pacijentu bude bolje, ne znaš da li je to tvoja zasluga ili spontani oporavak.</div>
+        </div>
+        <div data-reveal="" data-delay="120" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:26px; border-radius:16px; background:rgba(239,68,68,0.05); border:1px solid rgba(239,68,68,0.18);">
+          <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:#dc2626;">Zapneš kod složenih slučajeva</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Sportista ili hroničan bol te izbaci iz rutine i vraća na improvizaciju.</div>
+        </div>
+        <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:26px; border-radius:16px; background:rgba(239,68,68,0.05); border:1px solid rgba(239,68,68,0.18);">
+          <div style="font-weight:700; font-size:17px; margin-bottom:8px; color:#dc2626;">Nemaš sistem za odlučivanje</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Svaka procena počinje ispočetka, „na osećaj", umesto po jasnom kliničkom algoritmu.</div>
+        </div>
+      </div>
+
+      <!-- Improvizacija vs Sistem -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;" class="vsgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:32px; border-radius:18px; background:linear-gradient(180deg,rgba(239,68,68,0.07),rgba(239,68,68,0.02)); border:1px solid rgba(239,68,68,0.2);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#f87171; margin-bottom:14px;">IMPROVIZACIJA</div>
+          <div style="font-size:22px; font-weight:800; margin-bottom:18px;">Radiš po osećaju</div>
+          <div style="display:flex; flex-direction:column; gap:12px; color:#515c73; font-size:15px;">
+            <div style="display:flex; gap:10px;"><span style="color:#f87171;">✕</span> Kopiraš protokole sa interneta</div>
+            <div style="display:flex; gap:10px;"><span style="color:#f87171;">✕</span> Rezultati su nepredvidivi</div>
+            <div style="display:flex; gap:10px;"><span style="color:#f87171;">✕</span> Gubiš samopouzdanje pred težim slučajem</div>
+            <div style="display:flex; gap:10px;"><span style="color:#f87171;">✕</span> Ne umeš da objasniš pacijentu „zašto"</div>
+          </div>
+        </div>
+        <div data-reveal="" data-delay="120" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:32px; border-radius:18px; background:linear-gradient(180deg,rgba(34,211,238,0.14),rgba(34,211,238,0.05)); border:1px solid rgba(34,211,238,0.28);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#0891b2; margin-bottom:14px;">SISTEM</div>
+          <div style="font-size:22px; font-weight:800; margin-bottom:18px;">Radiš po algoritmu</div>
+          <div style="display:flex; flex-direction:column; gap:12px; color:#2a3346; font-size:15px;">
+            <div style="display:flex; gap:10px;"><span style="color:#0891b2;">✓</span> Procena vodi svaku odluku</div>
+            <div style="display:flex; gap:10px;"><span style="color:#0891b2;">✓</span> Ponovljivi, predvidivi rezultati</div>
+            <div style="display:flex; gap:10px;"><span style="color:#0891b2;">✓</span> Sigurnost i kod sportista i kod hroničnog bola</div>
+            <div style="display:flex; gap:10px;"><span style="color:#0891b2;">✓</span> Jasno komuniciraš plan pacijentu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FILOZOFIJA / 5 STUBOVA ============ -->
+  <section style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#f6f8fb; color:#16202f;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; max-width:720px; margin:0 auto 56px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">JEDINSTVENA POZICIJA</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; margin-bottom:16px; text-wrap:balance;">Vežba nije rešenje. <span style="color:#0891b2;">Vežba je alat.</span></h2>
+        <p style="color:#515c73; font-size:16px; line-height:1.6;">Pet principa koji razdvajaju terapeuta koji „daje vežbe" od terapeuta koji vodi klinički proces.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:56px;" class="pillars">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10); grid-column:span 2;">
+          <div style="font-size:34px; font-weight:800; color:rgba(8,145,178,0.28); margin-bottom:10px;">01</div>
+          <div style="font-size:19px; font-weight:800; margin-bottom:8px;">Vežba nije rešenje. Vežba je alat.</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.6;">Ne pitamo „koju vežbu?", nego „šta ovaj pacijent, u ovoj fazi, sada treba?". Alat biraš tek nakon odluke.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:34px; font-weight:800; color:rgba(8,145,178,0.28); margin-bottom:10px;">02</div>
+          <div style="font-size:19px; font-weight:800; margin-bottom:8px;">Procena pre protokola</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.6;">Dijagnostika određuje terapiju — nikada obrnuto.</div>
+        </div>
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:34px; font-weight:800; color:rgba(8,145,178,0.28); margin-bottom:10px;">03</div>
+          <div style="font-size:19px; font-weight:800; margin-bottom:8px;">Biopsihosocijalni pristup</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.6;">Bol nije samo mehanika. Kontekst pacijenta menja plan.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:34px; font-weight:800; color:rgba(8,145,178,0.28); margin-bottom:10px;">04</div>
+          <div style="font-size:19px; font-weight:800; margin-bottom:8px;">Progresija do opterećenja</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.6;">Od akutne faze do treninga sa tegovima i hex barom.</div>
+        </div>
+        <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:34px; font-weight:800; color:rgba(8,145,178,0.28); margin-bottom:10px;">05</div>
+          <div style="font-size:19px; font-weight:800; margin-bottom:8px;">Klinička odgovornost</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.6;">Znati kada NE lečiti i kada bezbedno uputiti dalje.</div>
+        </div>
+      </div>
+
+      <!-- Recept vs Kuvanje -->
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; margin-bottom:28px;">
+        <h3 style="font-size:clamp(22px,2.6vw,30px); font-weight:800;">Recept <span style="color:#7d8ba3;">vs</span> Kuvanje</h3>
+        <p style="color:#6b7488; font-size:15px; margin-top:6px;">Terapeut koji prati recept naspram terapeuta koji razume sistem.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;" class="vsgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:30px; border-radius:18px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#7d8ba3; margin-bottom:12px;">🧾 RECEPT</div>
+          <div style="font-size:20px; font-weight:800; margin-bottom:16px;">Slediš tačan spisak koraka</div>
+          <div style="color:#515c73; font-size:15px; line-height:1.7;">Radiš dok se sve uklapa. Ali kada pacijent „ne piše po receptu" — sportista, atipičan slučaj, komplikacija — ostaješ bez plana. Ne umeš da improvizuješ jer ne razumeš zašto svaki korak postoji.</div>
+        </div>
+        <div data-reveal="" data-delay="120" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:30px; border-radius:18px; background:linear-gradient(180deg,rgba(34,211,238,0.14),rgba(34,211,238,0.05)); border:1px solid rgba(34,211,238,0.28);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#0891b2; margin-bottom:12px;">👨‍🍳 KUVANJE</div>
+          <div style="font-size:20px; font-weight:800; margin-bottom:16px;">Razumeš principe iza svakog koraka</div>
+          <div style="color:#2a3346; font-size:15px; line-height:1.7;">Znaš čemu služi svaki „sastojak", pa možeš da prilagodiš plan svakom pacijentu. Kada situacija odstupi od standarda, ti i dalje donosiš sigurnu, obrazloženu odluku.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRANSFORMACIJA ============ -->
+  <section style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#edf1f6; color:#16202f;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; max-width:720px; margin:0 auto 56px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">TRANSFORMACIJA</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; text-wrap:balance;">Gde si sada — i gde ćeš biti posle dva dana</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(16px,3vw,40px); align-items:center;" class="prepost">
+        <div data-reveal="" style="opacity:0; transform:translateX(-24px); transition:opacity .8s ease, transform .8s ease; padding:32px; border-radius:20px; background:linear-gradient(180deg,#ffffff,rgba(239,68,68,0.06)); border:1px solid rgba(15,26,46,0.12);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#f87171; margin-bottom:20px;">PRE</div>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; gap:12px; color:#515c73; font-size:15px; line-height:1.5;"><span style="color:#f87171; font-weight:700;">—</span> Improvizuješ pred svakim novim slučajem</div>
+            <div style="display:flex; gap:12px; color:#515c73; font-size:15px; line-height:1.5;"><span style="color:#f87171; font-weight:700;">—</span> Kopiraš tuđe protokole bez konteksta</div>
+            <div style="display:flex; gap:12px; color:#515c73; font-size:15px; line-height:1.5;"><span style="color:#f87171; font-weight:700;">—</span> Nesiguran kod sportista i opterećenja</div>
+            <div style="display:flex; gap:12px; color:#515c73; font-size:15px; line-height:1.5;"><span style="color:#f87171; font-weight:700;">—</span> Rezultati zavise od sreće</div>
+          </div>
+        </div>
+
+        <div data-reveal="" data-delay="150" style="opacity:0; transition:opacity .8s ease; display:flex; align-items:center; justify-content:center;" class="arrowcell">
+          <div style="width:52px; height:52px; border-radius:50%; background:#22d3ee; display:flex; align-items:center; justify-content:center; box-shadow:0 0 30px rgba(34,211,238,0.4);">
+            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" stroke="#062430" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h17M13 3l6 6-6 6"></path></svg>
+          </div>
+        </div>
+
+        <div data-reveal="" data-delay="200" style="opacity:0; transform:translateX(24px); transition:opacity .8s ease, transform .8s ease; padding:32px; border-radius:20px; background:linear-gradient(180deg,rgba(34,211,238,0.13),rgba(37,99,235,0.07)); border:1px solid rgba(34,211,238,0.28);">
+          <div style="font-size:12px; letter-spacing:2px; font-weight:700; color:#0891b2; margin-bottom:20px;">POSLE</div>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; gap:12px; color:#2a3346; font-size:15px; line-height:1.5;"><span style="color:#0891b2; font-weight:700;">✓</span> Imaš sistem odlučivanja za svaki slučaj</div>
+            <div style="display:flex; gap:12px; color:#2a3346; font-size:15px; line-height:1.5;"><span style="color:#0891b2; font-weight:700;">✓</span> Samostalno procenjuješ i biraš terapiju</div>
+            <div style="display:flex; gap:12px; color:#2a3346; font-size:15px; line-height:1.5;"><span style="color:#0891b2; font-weight:700;">✓</span> Vodiš progresiju do treninga sa tegovima</div>
+            <div style="display:flex; gap:12px; color:#2a3346; font-size:15px; line-height:1.5;"><span style="color:#0891b2; font-weight:700;">✓</span> Predvidivi, ponovljivi rezultati</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; margin-top:44px; text-align:center; padding:32px; border-radius:18px; background:radial-gradient(600px 200px at 50% 0%, rgba(34,211,238,0.12), transparent); border:1px solid rgba(34,211,238,0.2);">
+        <div style="font-size:clamp(20px,2.6vw,30px); font-weight:800; line-height:1.3; text-wrap:balance;">Odlaziš sa sistemom koji primenjuješ <span style="color:#0891b2;">već od ponedeljka.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAM / CURRICULUM ============ -->
+  <section id="program" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#f6f8fb; color:#16202f;">
+    <div style="max-width:900px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; margin:0 auto 52px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">PROGRAM EDUKACIJE</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; text-wrap:balance;">Dva dana. Od procene do primene.</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <sc-for list="{{ curriculum }}" as="day" hint-placeholder-count="2">
+          <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; border-radius:18px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10); overflow:hidden;">
+            <button onClick="{{ day.onToggle }}" style="width:100%; display:flex; align-items:center; gap:20px; padding:26px 28px; background:transparent; border:none; cursor:pointer; text-align:left; color:#16202f;">
+              <div style="flex-shrink:0; width:54px; height:54px; border-radius:14px; background:linear-gradient(135deg,#22d3ee,#0e7490); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px; color:#062430;">{{ day.num }}</div>
+              <div style="flex:1;">
+                <div style="font-size:12px; letter-spacing:1.5px; color:#0891b2; font-weight:700; margin-bottom:4px;">{{ day.tag }}</div>
+                <div style="font-size:clamp(18px,2.2vw,23px); font-weight:800;">{{ day.title }}</div>
+              </div>
+              <div style="flex-shrink:0; width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:400; color:#0891b2;">{{ day.symbol }}</div>
+            </button>
+            <div style="{{ day.panelStyle }}">
+              <div style="padding:4px 28px 30px 102px;">
+                <p style="color:#515c73; font-size:15px; line-height:1.6; margin-bottom:20px;">{{ day.desc }}</p>
+                <div style="display:flex; flex-direction:column; gap:14px;">
+                  <sc-for list="{{ day.items }}" as="point" hint-placeholder-count="4">
+                    <div style="display:flex; gap:14px; align-items:flex-start;">
+                      <span style="flex-shrink:0; margin-top:2px; width:22px; height:22px; border-radius:6px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; color:#0891b2; font-size:13px; font-weight:700;">✓</span>
+                      <div>
+                        <div style="font-weight:700; font-size:15.5px;">{{ point.h }}</div>
+                        <div style="color:#6b7488; font-size:14px; line-height:1.5; margin-top:2px;">{{ point.d }}</div>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Praktičan rad band -->
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; margin-top:28px; display:grid; grid-template-columns:1fr 1fr; gap:16px;" class="workband">
+        <!-- SLIKA: Terapija u parovima -->
+        <div style="position:relative; aspect-ratio:16/10; border-radius:16px; overflow:hidden; border:1px solid rgba(15,26,46,0.12);">
+          <img src="uploads/lokomoto-64.jpg" alt="Terapija u parovima" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.8), transparent 45%);"></div>
+          <div style="position:absolute; bottom:16px; left:16px;">
+            <div style="font-size:14px; font-weight:700; color:#e8edf5;">Terapija u parovima</div>
+          </div>
+        </div>
+        <!-- SLIKA: Praktičan rad — vežbe / progresija opterećenja (npr. praktican-rad-2.jpg) -->
+        <div style="position:relative; aspect-ratio:16/10; border-radius:16px; overflow:hidden; border:1px solid rgba(15,26,46,0.12);">
+          <img src="uploads/lokomoto-80.jpg" alt="Progresija u trening" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(8,13,24,0.8), transparent 45%);"></div>
+          <div style="position:absolute; bottom:16px; left:16px;">
+            <div style="font-size:14px; font-weight:700; color:#e8edf5;">Progresija u trening</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DELIVERABLES ============ -->
+  <section style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#edf1f6; color:#16202f;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; max-width:720px; margin:0 auto 56px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">ŠTA REALNO DOBIJAŠ</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; text-wrap:balance;">Alati koje odmah ubacuješ u praksu</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;" class="delivgrid">
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="width:46px; height:46px; border-radius:12px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+          </div>
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px;">Obrazac za testiranje</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Strukturisan formular koji te vodi kroz kompletnu procenu, korak po korak.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="width:46px; height:46px; border-radius:12px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16"></path></svg>
+          </div>
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px;">Tabele diferencijalne dijagnostike</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Brza referenca za razlikovanje uzroka bola i prepoznavanje „crvenih zastavica".</div>
+        </div>
+        <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="width:46px; height:46px; border-radius:12px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          </div>
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px;">Liste za proveru faza</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Checklist kriterijumi za bezbedan prelazak iz akutne u rehab i trening fazu.</div>
+        </div>
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="width:46px; height:46px; border-radius:12px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v13H8l-4 4z"></path><path d="M8 9h8M8 13h5"></path></svg>
+          </div>
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px;">Handout skripta</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Kompletna štampana i digitalna skripta sa svim materijalima sa edukacije.</div>
+        </div>
+        <div data-reveal="" data-delay="80" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10);">
+          <div style="width:46px; height:46px; border-radius:12px; background:rgba(34,211,238,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:18px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+          </div>
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px;">WhatsApp podrška</div>
+          <div style="color:#515c73; font-size:14.5px; line-height:1.6;">Zatvorena grupa nakon kursa — pitanja iz prakse i konsultacije o slučajevima.</div>
+        </div>
+        <div data-reveal="" data-delay="160" style="opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; padding:28px; border-radius:16px; background:linear-gradient(135deg,rgba(34,211,238,0.12),rgba(37,99,235,0.08)); border:1px solid rgba(8,145,178,0.28); display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:800; font-size:17px; margin-bottom:7px; color:#16202f;">Potvrda o prisustvu</div>
+          <div style="color:#2a3346; font-size:14.5px; line-height:1.6;">Zvanična potvrda o pohađanju dvodnevne edukacije za tvoj portfolio.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:#edf1f6; color:#16202f;">
+    <div style="max-width:820px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; margin:0 auto 52px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#0891b2; font-weight:700; margin-bottom:14px;">ODGOVORI NA PRIGOVORE</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; text-wrap:balance;">Česta pitanja</h2>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <sc-for list="{{ faqItems }}" as="q" hint-placeholder-count="6">
+          <div data-reveal="" style="opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; border-radius:14px; background:#ffffff; box-shadow:0 6px 20px -12px rgba(15,26,46,0.22); border:1px solid rgba(15,26,46,0.10); overflow:hidden;">
+            <button onClick="{{ q.onToggle }}" style="width:100%; display:flex; align-items:center; gap:16px; padding:22px 24px; background:transparent; border:none; cursor:pointer; text-align:left; color:#16202f;">
+              <div style="flex:1; font-size:16.5px; font-weight:700;">{{ q.q }}</div>
+              <div style="flex-shrink:0; width:30px; height:30px; border-radius:50%; border:1px solid rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:20px; color:#0891b2;">{{ q.symbol }}</div>
+            </button>
+            <div style="{{ q.panelStyle }}">
+              <div style="padding:0 24px 24px; color:#515c73; font-size:15px; line-height:1.7;">{{ q.a }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CENA / PRIJAVA ============ -->
+  <section id="prijava" style="padding:clamp(64px,9vw,120px) clamp(20px,5vw,64px); background:radial-gradient(900px 500px at 80% 0%, rgba(34,211,238,0.12), transparent 55%), #1d2840;">
+    <div style="max-width:1080px; margin:0 auto;">
+      <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; text-align:center; max-width:720px; margin:0 auto 52px;">
+        <div style="font-size:13px; letter-spacing:2px; color:#22d3ee; font-weight:700; margin-bottom:14px;">CENA I PRIJAVA</div>
+        <h2 style="font-size:clamp(26px,3.4vw,42px); font-weight:800; letter-spacing:-0.02em; line-height:1.12; text-wrap:balance;">Obezbedi jedno od 20 mesta</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch;" class="pricegrid">
+        <!-- Pricing card -->
+        <div data-reveal="" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:36px; border-radius:22px; background:linear-gradient(180deg,rgba(34,211,238,0.1),rgba(255,255,255,0.02)); border:1px solid rgba(34,211,238,0.28);">
+          <div style="display:inline-flex; align-items:center; gap:8px; padding:6px 13px; border-radius:100px; background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.3); font-size:12px; font-weight:700; color:#fca5a5; margin-bottom:22px;">
+            <span style="width:6px; height:6px; border-radius:50%; background:#f87171;"></span> Ograničeno na 20 mesta
+          </div>
+          <div style="display:flex; align-items:flex-end; gap:10px; margin-bottom:6px;">
+            <div style="font-size:clamp(44px,6vw,64px); font-weight:800; line-height:1; color:#fff;">399€</div>
+            <div style="color:#8895a8; font-size:15px; padding-bottom:8px;">/ dvodnevna edukacija</div>
+          </div>
+          <div style="color:#8895a8; font-size:14px; margin-bottom:28px;">Uplata na račun · uputstvo stiže nakon prijave</div>
+
+          <div style="display:flex; flex-direction:column; gap:13px; margin-bottom:28px;">
+            <div style="display:flex; gap:12px; font-size:15px; color:#cdd6e3;"><span style="color:#22d3ee;">✓</span> 2 dana edukacije uživo (teorija + praktičan rad)</div>
+            <div style="display:flex; gap:12px; font-size:15px; color:#cdd6e3;"><span style="color:#22d3ee;">✓</span> Kompletna štampana i digitalna skripta</div>
+            <div style="display:flex; gap:12px; font-size:15px; color:#cdd6e3;"><span style="color:#22d3ee;">✓</span> Handout materijali i obrasci za praksu</div>
+            <div style="display:flex; gap:12px; font-size:15px; color:#cdd6e3;"><span style="color:#22d3ee;">✓</span> Pristup WhatsApp grupi nakon kursa</div>
+            <div style="display:flex; gap:12px; font-size:15px; color:#cdd6e3;"><span style="color:#22d3ee;">✓</span> Potvrda o prisustvu</div>
+          </div>
+
+          <div style="padding:18px; border-radius:14px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+            <div style="font-weight:700; font-size:14px; margin-bottom:6px; color:#22d3ee;">Politika refundacije</div>
+            <div style="color:#aab6c8; font-size:14px; line-height:1.6;">Puna refundacija za otkazivanje do mesec dana pre edukacije.</div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div data-reveal="" data-delay="120" style="opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; padding:36px; border-radius:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1);">
+          <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center; padding:40px 10px;">
+              <div style="width:64px; height:64px; border-radius:50%; background:rgba(34,211,238,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 22px;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              </div>
+              <div style="font-size:22px; font-weight:800; margin-bottom:10px;">Prijava zabeležena!</div>
+              <div style="color:#aab6c8; font-size:15px; line-height:1.6;">Uskoro ćeš dobiti mejl sa uputstvom za uplatu na račun i svim detaljima edukacije. Vidimo se u Beogradu.</div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ onSubmit }}">
+              <div style="font-size:20px; font-weight:800; margin-bottom:6px;">Prijavni formular</div>
+              <div style="color:#8895a8; font-size:14px; margin-bottom:24px;">Popuni prijavu — javljamo se sa instrukcijama za uplatu.</div>
+              <div style="display:flex; flex-direction:column; gap:16px;">
+                <div>
+                  <label style="display:block; font-size:13px; font-weight:600; color:#aab6c8; margin-bottom:7px;">Ime i prezime</label>
+                  <input type="text" required="" placeholder="Petar Petrović" style="width:100%; padding:13px 15px; border-radius:11px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); color:#fff; font-size:15px; outline:none;" style-focus="border-color:#22d3ee;">
+                </div>
+                <div>
+                  <label style="display:block; font-size:13px; font-weight:600; color:#aab6c8; margin-bottom:7px;">Email</label>
+                  <input type="email" required="" placeholder="tvoj@email.com" style="width:100%; padding:13px 15px; border-radius:11px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); color:#fff; font-size:15px; outline:none;" style-focus="border-color:#22d3ee;">
+                </div>
+                <div>
+                  <label style="display:block; font-size:13px; font-weight:600; color:#aab6c8; margin-bottom:7px;">Telefon</label>
+                  <input type="tel" required="" placeholder="+381 6x xxx xxxx" style="width:100%; padding:13px 15px; border-radius:11px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); color:#fff; font-size:15px; outline:none;" style-focus="border-color:#22d3ee;">
+                </div>
+                <div>
+                  <label style="display:block; font-size:13px; font-weight:600; color:#aab6c8; margin-bottom:7px;">Profesija</label>
+                  <select required="" style="width:100%; padding:13px 15px; border-radius:11px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); color:#fff; font-size:15px; outline:none;" style-focus="border-color:#22d3ee;">
+                    <option value="" style="background:#0a1120;">Izaberi...</option>
+                    <option style="background:#0a1120;">Fizioterapeut</option>
+                    <option style="background:#0a1120;">Trener</option>
+                    <option style="background:#0a1120;">Fizijatar</option>
+                    <option style="background:#0a1120;">Student</option>
+                    <option style="background:#0a1120;">Drugo</option>
+                  </select>
+                </div>
+                <button type="submit" style="margin-top:6px; width:100%; background:#22d3ee; color:#062430; font-weight:700; font-size:16px; padding:16px; border-radius:12px; border:none; cursor:pointer; transition:transform .2s ease, box-shadow .2s ease;" style-hover="transform:translateY(-2px); box-shadow:0 10px 30px rgba(34,211,238,0.4);">
+                  Rezerviši svoje mesto
+                </button>
+                <div style="text-align:center; color:#7d8ba3; font-size:12.5px; line-height:1.5;">Prijavom prihvataš da te kontaktiramo sa instrukcijama za uplatu na račun.</div>
+              </div>
+            </form>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="padding:clamp(48px,7vw,72px) clamp(20px,5vw,64px) 40px; background:#18233c; border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:32px; margin-bottom:40px;">
+        <div style="max-width:340px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <div style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#22d3ee,#0e7490); display:flex; align-items:center; justify-content:center; font-weight:800; color:#062430;">L</div>
+            <div style="font-weight:800; font-size:15px;">LOKOMOTO EDUKACIJE</div>
+          </div>
+          <p style="color:#8895a8; font-size:14px; line-height:1.6;">Procena i rehabilitacija bola u donjem delu leđa — praktična edukacija za terapeute koji žele sistem, a ne recept.</p>
+        </div>
+        <div style="display:flex; gap:56px; flex-wrap:wrap;">
+          <div>
+            <div style="font-size:12px; letter-spacing:1px; color:#7d8ba3; font-weight:700; margin-bottom:14px;">EDUKACIJA</div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:14px;">
+              <a href="#program" style="color:#aab6c8;" style-hover="color:#fff;">Program</a>
+              <a href="#predavac" style="color:#aab6c8;" style-hover="color:#fff;">Predavač</a>
+              <a href="#faq" style="color:#aab6c8;" style-hover="color:#fff;">FAQ</a>
+              <a href="#prijava" style="color:#aab6c8;" style-hover="color:#fff;">Prijava</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:12px; letter-spacing:1px; color:#7d8ba3; font-weight:700; margin-bottom:14px;">KONTAKT</div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:14px; color:#aab6c8;">
+              <div>Lokomoto Centar, Beograd</div>
+              <div>31.10.2026.</div>
+              <a href="mailto:info@lokomoto.rs" style="color:#22d3ee;">info@lokomoto.rs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:20px; border-radius:14px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); margin-bottom:28px;">
+        <div style="font-size:12px; letter-spacing:1px; color:#7d8ba3; font-weight:700; margin-bottom:8px;">DISCLAIMER</div>
+        <p style="color:#7d8ba3; font-size:12.5px; line-height:1.6;">Edukacija je namenjena stručnom usavršavanju i ne zamenjuje formalno obrazovanje, licencu niti nadležne kliničke standarde. Predstavljeni protokoli i obrasci služe kao pomoć u proceduri i primenjuju se u okviru profesionalnih kompetencija i propisa svake struke. Za dijagnostiku i lečenje uvek važe važeći klinički standardi i odgovornost licenciranog stručnjaka.</p>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; color:#5c6a80; font-size:12.5px;">
+        <div>© 2026 Lokomoto Centar. Sva prava zadržana.</div>
+        <div>Beograd, Srbija</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ VIDEO MODAL ============ -->
+  <sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeVideo }}" style="position:fixed; inset:0; z-index:100; background:rgba(4,7,13,0.88); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:24px;">
+      <div style="position:relative; width:100%; max-width:960px;">
+        <button onClick="{{ closeVideo }}" style="position:absolute; top:-46px; right:0; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#fff; width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:18px;">✕</button>
+        <video src="uploads/0-02-05-102a799a68ab0579844ae39b8bdfac01d36e9a7b48fb173bfa149e9cad4dfcc0_d9ff64292a14d43e.mp4" controls="" autoplay="" playsinline="" style="width:100%; aspect-ratio:16/9; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,0.12); background:#000; display:block;"></video>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0b1524"/><rect x="30" y="30" width="40" height="40" rx="10" fill="#22d3ee"/><text x="50" y="63" font-family="sans-serif" font-size="30" font-weight="800" fill="#062430" text-anchor="middle">L</text></svg>
+</template></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openDay: 0, openFaq: -1, videoOpen: false, submitted: false };
+
+  componentDidMount() {
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+          el.style.transitionDelay = d + 'ms';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          reveal.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    const counters = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = parseFloat(el.getAttribute('data-count'));
+          const suf = el.getAttribute('data-suffix') || '';
+          const dur = 1300, start = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - start) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.floor(eased * target) + suf;
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target + suf;
+          };
+          requestAnimationFrame(step);
+          counters.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    requestAnimationFrame(() => {
+      document.querySelectorAll('[data-reveal]').forEach((el) => reveal.observe(el));
+      document.querySelectorAll('[data-count]').forEach((el) => counters.observe(el));
+    });
+    this._reveal = reveal;
+  }
+
+  componentDidUpdate() {
+    if (this._reveal) {
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        if (el.style.opacity !== '1') this._reveal.observe(el);
+      });
+    }
+  }
+
+  panel(open) {
+    return {
+      overflow: 'hidden',
+      maxHeight: open ? '900px' : '0',
+      opacity: open ? 1 : 0,
+      transition: 'max-height .55s ease, opacity .4s ease',
+    };
+  }
+
+  renderVals() {
+    const curriculumData = [
+      {
+        tag: 'DAN 1',
+        title: 'Procena i Dijagnostika',
+        desc: 'Postavljamo temelj: kako sistematski proceniti pacijenta i doći do jasne kliničke odluke pre bilo kakve terapije.',
+        items: [
+          { h: 'Biopsihosocijalni pristup', d: 'Kako kontekst pacijenta, a ne samo mehanika, oblikuje ceo plan.' },
+          { h: 'Biomehanika lumbalne kičme', d: 'Šta se stvarno dešava pod opterećenjem i zašto je to važno za odluku.' },
+          { h: 'Diferencijalna dijagnostika', d: 'Razlikovanje uzroka bola i prepoznavanje „crvenih zastavica".' },
+          { h: 'Praktični blok — testiranje u parovima', d: 'Uvežbavanje kompletne procene na terenu, korak po korak.' },
+        ],
+      },
+      {
+        tag: 'DAN 2',
+        title: 'Terapija i Primena',
+        desc: 'Od odluke do rezultata: kako voditi pacijenta kroz faze — od akutnog stanja do treninga sa opterećenjem.',
+        items: [
+          { h: 'Akutna faza', d: 'Prioriteti, ograničenja i bezbedan početak terapije.' },
+          { h: 'Rehab faza', d: 'Kriterijumi napretka i izbor pravih alata za svaku fazu.' },
+          { h: 'Progresija u trening sa tegovima / hex barom', d: 'Bezbedan prelazak ka opterećenju i povratku funkciji.' },
+          { h: 'Slučajevi iz prakse', d: 'Analiza stvarnih slučajeva i primena celog sistema odlučivanja.' },
+        ],
+      },
+    ];
+
+    const faqData = [
+      { q: 'Nemam mnogo iskustva — da li je edukacija za mene?', a: 'Da. Ceo koncept je izgrađen oko sistema odlučivanja, tako da ćeš dobiti jasan okvir bez obzira na to koliko dugo radiš. Praktični blokovi u parovima ti pomažu da odmah primeniš naučeno.' },
+      { q: 'Radim sa sportistima — pokriva li edukacija opterećenje?', a: 'Da. Dan 2 se bavi progresijom do treninga sa tegovima i hex barom, uključujući bezbedan povratak sportista punom opterećenju i funkciji.' },
+      { q: 'Koliko je edukacija teorija, a koliko praktičan rad?', a: 'Naglasak je na primeni. Teorija postoji samo da bi opravdala odluke — najveći deo vremena provodiš u praktičnim blokovima i radu u parovima.' },
+      { q: 'Šta ako predmet ne mogu odmah da primenim u praksi?', a: 'Sistem je namerno dizajniran tako da ga koristiš „već od ponedeljka". Dobijaš obrasce, tabele i liste za proveru koje odmah ubacuješ u svoj rad.' },
+      { q: 'Da li dobijam materijale i podršku posle kursa?', a: 'Da — kompletnu skriptu, handout materijale i pristup zatvorenoj WhatsApp grupi za pitanja iz prakse i konsultacije o slučajevima.' },
+      { q: 'Kako se vrši uplata i šta ako otkažem?', a: 'Uplata je na račun; instrukcije stižu nakon prijave. Puna refundacija je moguća za otkazivanje do mesec dana pre edukacije.' },
+    ];
+
+    const curriculum = curriculumData.map((d, i) => ({
+      ...d,
+      num: String(i + 1),
+      open: this.state.openDay === i,
+      symbol: this.state.openDay === i ? '–' : '+',
+      onToggle: () => this.setState((s) => ({ openDay: s.openDay === i ? -1 : i })),
+      panelStyle: this.panel(this.state.openDay === i),
+    }));
+
+    const faqItems = faqData.map((f, i) => ({
+      ...f,
+      open: this.state.openFaq === i,
+      symbol: this.state.openFaq === i ? '–' : '+',
+      onToggle: () => this.setState((s) => ({ openFaq: s.openFaq === i ? -1 : i })),
+      panelStyle: this.panel(this.state.openFaq === i),
+    }));
+
+    return {
+      curriculum,
+      faqItems,
+      videoOpen: this.state.videoOpen,
+      openVideo: () => this.setState({ videoOpen: true }),
+      closeVideo: () => this.setState({ videoOpen: false }),
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      onSubmit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
